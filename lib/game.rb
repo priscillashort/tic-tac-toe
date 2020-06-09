@@ -8,7 +8,13 @@ class Game
 	end
 
 	def over?
-		false
+		if board == nil
+			false
+		elsif board.full?
+			true
+		else
+			false
+		end
 	end
 
 end
