@@ -22,7 +22,18 @@ class Game
 	end
 
 	def winner
-		:x
+		if (board.token_at(:top, :left) == :o && board.token_at(:top, :middle) == :o && board.token_at(:top, :right) == :o) ||
+			(board.token_at(:middle, :left) == :o && board.token_at(:middle, :middle) == :o && board.token_at(:middle, :right) == :o) ||
+			(board.token_at(:bottom, :left) == :o && board.token_at(:bottom, :middle) == :o && board.token_at(:bottom, :right) == :o)
+			:o
+		else
+			:x
+		end
+
+		# board.each do |row|
+		# 	if token_at(:top, :left) == :o
+		# end
+		# :x
 	end
 
 end
