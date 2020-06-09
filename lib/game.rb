@@ -22,12 +22,18 @@ class Game
 	end
 
 	def winner
-		if (board.token_at(:top, :left) == :o && board.token_at(:top, :middle) == :o && board.token_at(:top, :right) == :o) ||
+		if board == nil
+			nil
+		elsif (board.token_at(:top, :left) == :o && board.token_at(:top, :middle) == :o && board.token_at(:top, :right) == :o) ||
 			(board.token_at(:middle, :left) == :o && board.token_at(:middle, :middle) == :o && board.token_at(:middle, :right) == :o) ||
 			(board.token_at(:bottom, :left) == :o && board.token_at(:bottom, :middle) == :o && board.token_at(:bottom, :right) == :o)
 			:o
-		else
+		elsif (board.token_at(:top, :left) == :x && board.token_at(:top, :middle) == :x && board.token_at(:top, :right) == :x) ||
+			(board.token_at(:middle, :left) == :x && board.token_at(:middle, :middle) == :x && board.token_at(:middle, :right) == :x) ||
+			(board.token_at(:bottom, :left) == :x && board.token_at(:bottom, :middle) == :x && board.token_at(:bottom, :right) == :x)
 			:x
+		else
+			nil
 		end
 
 		# board.each do |row|
