@@ -6,4 +6,9 @@ class Game
 	def initialize(board = nil)
 		@board = board
 	end
+
+	def over?
+		false
+	end
+
 end
