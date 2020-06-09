@@ -21,4 +21,8 @@ class Game
 		true
 	end
 
+	def winner
+		:x
+	end
+
 end
