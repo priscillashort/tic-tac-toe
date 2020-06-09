@@ -39,12 +39,10 @@ describe 'A game of tic tac toe' do
   end
 
   it 'has a board' do
-    skip
     expect(Game.new).to respond_to(:board)
   end
 
   it 'can be created with a specific board' do
-    skip
     fake_board = 'FAKE'
     game = Game.new(fake_board)
     expect(game.board).to eq(fake_board)
