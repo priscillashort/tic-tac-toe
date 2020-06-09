@@ -35,11 +35,6 @@ class Game
 		else
 			nil
 		end
-
-		# board.each do |row|
-		# 	if token_at(:top, :left) == :o
-		# end
-		# :x
 	end
 
 end
