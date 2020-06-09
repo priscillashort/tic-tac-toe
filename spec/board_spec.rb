@@ -54,4 +54,13 @@ describe 'A Tic Tac Toe board' do
     midgame_board.place(:x, :top, :left)
     expect(midgame_board.token_at(:top, :left)).to eq(:x)
   end
+
+  it 'can reset locations' do
+    midgame_board.reset
+    expect(midgame_board.locations).to eq({
+      top: {left: nil, middle: nil, right: nil},
+      middle: {left: nil, middle: nil, right: nil},
+      bottom: {left: nil, middle: nil, right: nil}
+    })
+  end
 end
