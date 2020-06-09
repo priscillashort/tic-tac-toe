@@ -50,4 +50,8 @@ describe 'A Tic Tac Toe board' do
     expect(midgame_board.token_at(:top, :left)).to eq(:o)
   end
 
+  it 'can place a token at a given location' do
+    midgame_board.place(:x, :top, :left)
+    expect(midgame_board.token_at(:top, :left)).to eq(:x)
+  end
 end
